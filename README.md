@@ -1,5 +1,4 @@
 
-````
 # ChurnPredictor
 
 This project focuses on predicting customer churn using machine learning models. It provides a Python class, `ChurnPredictor`, to train and evaluate models using customer data, with support for AutoML to automatically select the best model. The project also implements data version control (DVC) for managing dataset versions and utilizes Git branching for efficient project management.
@@ -8,7 +7,7 @@ This project focuses on predicting customer churn using machine learning models.
 
 ## Project Structure
 
-```
+
 ChurnPredictor/
 │
 ├── data/                     
@@ -32,7 +31,7 @@ ChurnPredictor/
 ├── README.md                 # Project documentation
 ├── main.py                   # Entry point to run the project
 └── setup.py                  # Optional packaging
-```
+
 
 ---
 
@@ -40,38 +39,38 @@ ChurnPredictor/
 
 ### 1. Clone the Repository
 
-```bash
+bash
 git clone <your-repo-url>
 cd ChurnPredictor
-```
+
 
 ### 2. Set Up Virtual Environment
 
-```bash
+bash
 python -m venv venv
 source venv/bin/activate      # For Windows: venv\Scripts\activate
-```
+
 
 ### 3. Install Dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-```
+
 
 ### 4. Initialize DVC
 
-```bash
+bash
 dvc init
 dvc add data/customer_data.csv
 git add data/customer_data.csv.dvc .gitignore
 git commit -m "Initialize DVC and track dataset"
-```
+
 
 ### 5. Run the Project
 
-```bash
+bash
 python main.py
-```
+
 
 ---
 
@@ -101,12 +100,12 @@ Git branching is used to manage features related to different contract types:
 
 Example:
 
-```bash
+bash
 git checkout -b feature-month-to-month
 git add .
 git commit -m "Added Month-to-Month contract logic"
 git push origin feature-month-to-month
-```
+
 
 ---
 
@@ -114,13 +113,13 @@ git push origin feature-month-to-month
 
 Track the dataset with DVC:
 
-```bash
+bash
 dvc add data/customer_data.csv
 git add data/customer_data.csv.dvc
 git commit -m "Update customer dataset"
 git push
 dvc push
-```
+
 
 ---
 
@@ -128,6 +127,5 @@ dvc push
 
 Run unit tests for `ChurnPredictor`:
 
-```bash
+bash
 python -m unittest discover tests/
-```
